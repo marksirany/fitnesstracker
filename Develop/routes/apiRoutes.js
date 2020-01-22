@@ -1,4 +1,4 @@
-//got help from jake's code abd tutor session
+//got help tutor session and some of Jake's code
 var db = require("../models");
 
 module.exports = {
