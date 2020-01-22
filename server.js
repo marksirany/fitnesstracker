@@ -5,7 +5,7 @@ const mongojs = require("mongojs");
 
 const PORT = process.env.PORT || 3000;
 
-const Workout = require("./models/workout");
+const Workout = require("./Develop/models/workout");
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", { useNewUrlParser: true });
 
-const db = require("./models");
+const db = require("./Develop/models");
 
 //get last workout
 app.get("/api/workouts", (req, res) => {
