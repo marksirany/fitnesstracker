@@ -1,3 +1,4 @@
+//deckare constants
 const express = require("express");
 const mongoose = require("mongoose");
 const mongojs = require("mongojs");
@@ -18,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", { u
 
 const db = require("./models");
 
-// Used by api.js to get last workout
+//get last workout
 app.get("/api/workouts", (req, res) => {
     db.Workout.find({})
         .then(workout => {
